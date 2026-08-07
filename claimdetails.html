@@ -2,27 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set explicit scale so mobile browsers render full desktop width -->
+  <meta name="viewport" content="width=1280, initial-scale=0.35, maximum-scale=2.0, user-scalable=yes">
   <title>VitaTrack - Claim Details</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="claimdetails.css">
 </head>
 <body>
 
-  <!-- MOBILE TOP NAV -->
-  <header class="mobile-header">
-    <div class="brand">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="#6366f1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      <strong>VitaTrack</strong>
-    </div>
-    <span class="mobile-badge">CLM-2024/1022</span>
-  </header>
-
   <div class="app-container">
 
-    <!-- DESKTOP SIDEBAR -->
+    <!-- FIXED SIDEBAR -->
     <aside class="sidebar">
-      <div class="brand desktop-only">
+      <div class="brand">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="#6366f1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         <div>
           <h2 class="brand-title">VitaTrack</h2>
@@ -46,6 +38,7 @@
             <p class="user-name">Sec Tessa</p>
             <p class="user-role">Billing Manager</p>
           </div>
+          <span class="chevron">▼</span>
         </div>
 
         <p class="quick-title">Quick Actions</p>
@@ -59,7 +52,7 @@
       <a href="onboarding.html" class="logout-btn">🚪 LOGOUT</a>
     </aside>
 
-    <!-- MAIN WRAPPER -->
+    <!-- MAIN DASHBOARD CONTENT -->
     <main class="main-content">
 
       <!-- TOP HEADER -->
@@ -74,30 +67,31 @@
 
         <div class="header-right">
           <div class="search-input">
-            🔍 <input type="text" placeholder="Search claims, patients...">
+            🔍 <input type="text" placeholder="Search claims, patients and invoices...">
           </div>
           <div class="notif-icon">🔔<span class="red-dot"></span></div>
           <div class="profile-pill">
             <div class="avatar-green">ST</div>
-            <div class="desktop-only">
+            <div>
               <span class="profile-name">Sec Tessa</span>
               <span class="profile-role">Billing Manager</span>
             </div>
+            <span class="caret-down">▼</span>
           </div>
         </div>
       </header>
 
-      <!-- ACTION BUTTONS -->
+      <!-- SUB HEADER ACTION BAR -->
       <div class="action-bar">
         <button class="btn-sub">🖨️ Print</button>
         <button class="btn-sub">⬇️ Download</button>
         <button class="btn-indigo">Take Action ▼</button>
       </div>
 
-      <!-- DASHBOARD CONTENT -->
+      <!-- MAIN GRID CONTENT -->
       <div class="content-body">
 
-        <!-- TOP COMBINED CARD -->
+        <!-- ROW 1: PATIENT, OVERVIEW & STATUS -->
         <div class="card card-triple">
           <div class="card-col">
             <h3>Patient Information</h3>
@@ -143,7 +137,7 @@
           </div>
         </div>
 
-        <!-- ROW TWO -->
+        <!-- ROW 2: BILLING, NOTES & ACTIONS -->
         <div class="row-three">
           <div class="card">
             <h3>Billing Summary</h3>
@@ -195,7 +189,7 @@
           </div>
         </div>
 
-        <!-- ROW THREE -->
+        <!-- ROW 3: INSURANCE & HISTORY -->
         <div class="row-two">
           <div class="card col-4">
             <h3>Insurance Information</h3>
