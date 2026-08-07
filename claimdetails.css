@@ -20,7 +20,7 @@ body {
 
 /* SIDEBAR LAYOUT */
 .sidebar {
-  width: 220px;
+  width: 210px;
   background-color: #0b132b;
   color: #fff;
   padding: 16px 12px;
@@ -28,13 +28,17 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   flex-shrink: 0;
+  height: 100vn;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .brand-title {
@@ -51,7 +55,8 @@ body {
 .nav-menu {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
+  margin-bottom: 16px;
   
 }
 
@@ -73,8 +78,8 @@ body {
 }
 
 .sidebar-user {
-  margin-top: auto;
-  padding-top: 14px;
+  margin-top: 0;
+  padding-top: 12px;
   border-top: 1px solid #1e293b;
 }
 
@@ -114,9 +119,9 @@ body {
   background: transparent;
   border: 1px solid #1e293b;
   color: #cbd5e1;
-  padding: 7px 8px;
+  padding: 6px 8px;
   border-radius: 6px;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-align: left;
   margin-bottom: 5px;
   cursor: pointer;
@@ -125,11 +130,11 @@ body {
 .logout-btn {
   color: #94a3b8;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 12px;
+  margin-top: auto;
 }
 
 /* MAIN CONTENT WRAPPER */
