@@ -26,7 +26,7 @@ body {
   padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-shrink: 0;
 }
 
@@ -34,7 +34,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .brand-title {
@@ -52,6 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  
 }
 
 .nav-item {
@@ -72,7 +73,7 @@ body {
 }
 
 .sidebar-user {
-  margin-top: 16px;
+  margin-top: auto;
   padding-top: 14px;
   border-top: 1px solid #1e293b;
 }
