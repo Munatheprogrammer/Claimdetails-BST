@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VitaTrack — Claim Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="claimdetails.css"/>
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-top">
+        <img src="logo.png" alt="logo" class="logo-img"/>
+        <span class="logo-name">VitaTrack</span>
+      </div>
+      <p class="logo-tagline">Hospital Billings & Collections</p>
+    </div>
+
+    <a href="dashboard.html" class="nav-item">
+      <span class="nav-icon">&#8962;</span> Dashboard
+    </a>
+    <a href="departments.html" class="nav-item">
+      <span class="nav-icon">&#9783;</span> Departments
+    </a>
+    <a href="workqueue.html" class="nav-item active">
+      <span class="nav-icon">&#9783;</span> Work Queue
+    </a>
+    <a href="reports.html" class="nav-item">
+      <span class="nav-icon">&#9783;</span> Reports
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">&#9783;</span> Notifications
+    </a>
+    <a href="#" class="nav-item">
+      <span class="nav-icon">&#9783;</span> Settings
+    </a>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="user-section">
+      <div class="user-avatar">ST</div>
+      <div class="user-info">
+        <p class="user-name">Sec Tessa</p>
+        <p class="user-role">Billing Manager</p>
+      </div>
+      <span class="chevron">&#9660;</span>
+    </div>
+
+    <p class="quick-label">QUICK ACTIONS</p>
+    <div class="quick-btn">
+      <span class="quick-icon">&#43;</span> Add New Claims
+    </div>
+    <div class="quick-btn">
+      <span class="quick-icon">&#8679;</span> Upload Document
+    </div>
+    <div class="quick-btn">
+      <span class="quick-icon">&#9783;</span> Generate Report
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="onboarding.html" class="logout-btn">
+        <span>&#8617;</span> LOGOUT
+      </a>
+    </div>
+  </aside>
+
+  <div class="main">
+
+    <div class="topbar">
+      <div class="topbar-left">
+        <a class="breadcrumb" href="workqueue.html">&#8592; Back to Work Queue</a>
+        <div class="topbar-title">
+          Claim Details
+          <span class="claim-id-badge">CLM-2024/022</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" placeholder="Search claims, patients and invoices..." class="search-input"/>
+        </div>
+        <div class="notif-btn">
+          <span class="bell">&#128276;</span>
+          <span class="notif-badge">2</span>
+        </div>
+        <div class="user-chip">
+          <div class="chip-avatar">ST</div>
+          <div class="chip-info">
+            <p class="chip-name">Sec Tessa</p>
+            <p class="chip-role">Billing Manager</p>
+          </div>
+          <span class="chip-chevron">&#9660;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <button class="action-bar-btn">
+        <span>&#128438;</span> Print
+      </button>
+      <button class="action-bar-btn">
+        <span>&#8681;</span> Download
+      </button>
+      <button class="action-bar-btn primary">
+        Take Action <span>&#9660;</span>
+      </button>
+    </div>
+
+    <div class="content">
+
+      <!-- TOP ROW -->
+      <div class="top-row">
+
+        <div class="info-card">
+          <h3>Patient Information</h3>
+          <div class="patient-top">
+            <div class="patient-avatar">SJ</div>
+            <div>
+              <p class="patient-name">Sarah Johnson</p>
+              <p class="patient-id">Patient ID: PAT-004547</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">&#128222;</span>
+            <span>(555) 987-6543</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">&#9993;</span>
+            <span>sarah.johnson@gmail.com</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">&#128205;</span>
+            <span>123 Maple Street, Austin, TX 78701</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Claim Overview</h3>
+          <div class="claim-row">
+            <span class="claim-label">Department</span>
+            <span class="claim-value">Oncology</span>
+          </div>
+          <div class="claim-row">
+            <span class="claim-label">Date of Service</span>
+            <span class="claim-value">Apr 12 – Apr 18, 2024</span>
+          </div>
+          <div class="claim-row">
+            <span class="claim-label">Claim Amount</span>
+            <span class="claim-value">$18,450.00</span>
+          </div>
+          <div class="claim-row">
+            <span class="claim-label">Insurance Provider</span>
+            <span class="claim-value">Blue Cross Blue Shield</span>
+          </div>
+          <div class="claim-row">
+            <span class="claim-label">Policy Member ID</span>
+            <span class="claim-value">BCBS-87654321</span>
+          </div>
+          <div class="claim-row">
+            <span class="claim-label">Assigned To</span>
+            <span class="claim-value">
+              <span class="assigned-avatar">MA</span> Michelle A.
+            </span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Status <span class="status-badge">Pending</span></h3>
+          <p class="days-outstanding-label">Days Outstanding</p>
+          <p class="days-outstanding-value">126 days</p>
+          <div class="status-row">
+            <span class="status-label">Claim Received</span>
+            <span class="status-value">Apr 20, 2024</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label">Last Follow Up</span>
+            <span class="status-value">May 10, 2024</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label">Next Follow Up</span>
+            <span class="status-value">May 17, 2024</span>
+          </div>
+          <button class="follow-up-btn" onclick="handleFollowUp()">Follow Up</button>
+        </div>
+
+      </div>
+
+      <!-- MIDDLE ROW -->
+      <div class="middle-row">
+
+        <div class="info-card">
+          <h3>Billing Summary</h3>
+          <div class="billing-row">
+            <span class="billing-label">Room Charges</span>
+            <span class="billing-value">$6,500.00</span>
+          </div>
+          <div class="billing-row">
+            <span class="billing-label">Procedure Charges</span>
+            <span class="billing-value">$8,900.00</span>
+          </div>
+          <div class="billing-row">
+            <span class="billing-label">Medication</span>
+            <span class="billing-value">$2,350.00</span>
+          </div>
+          <div class="billing-row">
+            <span class="billing-label">Laboratory</span>
+            <span class="billing-value">$450.00</span>
+          </div>
+          <div class="billing-row">
+            <span class="billing-label">Other Charges</span>
+            <span class="billing-value">$250.00</span>
+          </div>
+          <div class="billing-divider"></div>
+          <div class="billing-row">
+            <span class="billing-total-label">Total Billed</span>
+            <span class="billing-total-value">$18,450.00</span>
+          </div>
+          <div class="billing-row">
+            <span class="billing-adj-label">Insurance Adjustment</span>
+            <span class="billing-adj-value">-$0.00</span>
+          </div>
+          <div class="amount-due-box">
+            <span class="amount-due-label">Amount Due</span>
+            <span class="amount-due-value">$18,450.00</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Notes</h3>
+          <div class="notes-box">
+            <p class="notes-text">Called insurance on May 10th. They confirmed receipt of documents and are currently reviewing the claim. Turn around time is 15 business days.</p>
+            <p class="notes-author">-Michelle A. May 10, 2024 10:30 AM</p>
+          </div>
+          <button class="add-note-btn" onclick="addNote()">
+            <span>&#9998;</span> Add Note
+          </button>
+          <div class="docs-header">
+            <span class="docs-label">Documents (3)</span>
+            <span class="docs-view-all" onclick="viewAllDocs()">View All</span>
+          </div>
+          <div class="doc-row">
+            <span class="doc-icon">&#128196;</span>
+            <span class="doc-name">Itemised Bill.pdf</span>
+            <span class="doc-date">May 3, 2024</span>
+            <span class="doc-download" onclick="downloadDoc('Itemised Bill.pdf')">&#8681;</span>
+          </div>
+          <div class="doc-row">
+            <span class="doc-icon">&#128196;</span>
+            <span class="doc-name">Medical Records.pdf</span>
+            <span class="doc-date">May 3, 2024</span>
+            <span class="doc-download" onclick="downloadDoc('Medical Records.pdf')">&#8681;</span>
+          </div>
+          <div class="doc-row">
+            <span class="doc-icon">&#128196;</span>
+            <span class="doc-name">Insurance Card.pdf</span>
+            <span class="doc-date">May 3, 2024</span>
+            <span class="doc-download" onclick="downloadDoc('Insurance Card.pdf')">&#8681;</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Actions</h3>
+          <div class="action-item" onclick="handleAction('Add Note')">
+            <div class="action-left">
+              <span class="action-icon blue">&#9998;</span>
+              <span>Add Note</span>
+            </div>
+            <span class="action-arrow">&#62;</span>
+          </div>
+          <div class="action-item" onclick="handleAction('Upload Documents')">
+            <div class="action-left">
+              <span class="action-icon blue">&#9783;</span>
+              <span>Upload Documents</span>
+            </div>
+            <span class="action-arrow">&#62;</span>
+          </div>
+          <div class="action-item" onclick="handleAction('Assign to User')">
+            <div class="action-left">
+              <span class="action-icon blue">&#9783;</span>
+              <span>Assign to User</span>
+            </div>
+            <span class="action-arrow">&#62;</span>
+          </div>
+          <div class="action-item orange" onclick="handleAction('Escalate Claim')">
+            <div class="action-left">
+              <span class="action-icon">&#9783;</span>
+              <span>Escalate Claim</span>
+            </div>
+            <span class="action-arrow">&#62;</span>
+          </div>
+          <div class="action-item green" onclick="handleAction('Mark as Resolved')">
+            <div class="action-left">
+              <span class="action-icon">&#10003;</span>
+              <span>Mark as Resolved</span>
+            </div>
+            <span class="action-arrow">&#62;</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM ROW -->
+      <div class="bottom-row">
+
+        <div class="info-card">
+          <h3>Insurance Information</h3>
+          <div class="ins-row">
+            <span class="ins-label">Provider</span>
+            <span class="ins-value">Blue Cross Blue Shield</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Plan Name</span>
+            <span class="ins-value">BCBS PRO</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Policy Holder</span>
+            <span class="ins-value">Sarah Johnson</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Policy Member ID</span>
+            <span class="ins-value">BCBS-87654321</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Group Number</span>
+            <span class="ins-value">567890</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Copay</span>
+            <span class="ins-value">$350.00</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Deductible</span>
+            <span class="ins-value">$1,500.00</span>
+          </div>
+          <div class="ins-row">
+            <span class="ins-label">Coinsurance</span>
+            <span class="ins-value">20%</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="followup-header">
+            <span class="followup-title">Follow Up History</span>
+            <button class="add-followup-btn" onclick="addFollowUp()">
+              &#8681; Add Follow Up
+            </button>
+          </div>
+          <table class="followup-table">
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>Followed Up By</th>
+                <th>Activity</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="followup-body">
+              <tr>
+                <td>May 10, 2024 10:30AM</td>
+                <td>Michelle A.</td>
+                <td>Phone Call</td>
+                <td>Spoke with representative. Claim under review.</td>
+              </tr>
+              <tr>
+                <td>May 7, 2024 14:15PM</td>
+                <td>Sonrina B.</td>
+                <td>Email</td>
+                <td>Sent requested additional information.</td>
+              </tr>
+              <tr>
+                <td>May 3, 2024 9:45AM</td>
+                <td>Victor C.</td>
+                <td>Document Upload</td>
+                <td>Uploaded additional documents.</td>
+              </tr>
+              <tr>
+                <td>Apr 23, 2024 09:20AM</td>
+                <td>Diana D.</td>
+                <td>Status Update</td>
+                <td>Insurance acknowledged receipt.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ADD NOTE MODAL -->
+  <div class="modal-overlay" id="noteModal">
+    <div class="modal">
+      <h3>Add Note</h3>
+      <textarea id="noteText" placeholder="Type your note here..."></textarea>
+      <div class="modal-btns">
+        <button class="modal-cancel" onclick="closeModal('noteModal')">Cancel</button>
+        <button class="modal-save" onclick="saveNote()">Save Note</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOLLOW UP MODAL -->
+  <div class="modal-overlay" id="followUpModal">
+    <div class="modal">
+      <h3>Add Follow Up</h3>
+      <input type="text" id="followUpBy" placeholder="Followed up by..." class="modal-input"/>
+      <input type="text" id="followUpActivity" placeholder="Activity (e.g. Phone Call, Email...)" class="modal-input"/>
+      <textarea id="followUpNote" placeholder="Notes..."></textarea>
+      <div class="modal-btns">
+        <button class="modal-cancel" onclick="closeModal('followUpModal')">Cancel</button>
+        <button class="modal-save" onclick="saveFollowUp()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="claimdetails.js"></script>
+</body>
+</html>
