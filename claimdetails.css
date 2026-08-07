@@ -8,35 +8,20 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f1f5f9;
   color: #0f172a;
-}
-
-.mobile-header {
-  display: none;
-  background: #0f172a;
-  color: #fff;
-  padding: 12px 16px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mobile-badge {
-  background: #1e293b;
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  color: #94a3b8;
+  min-width: 1280px; /* Lock body width to full desktop view */
 }
 
 .app-container {
   display: flex;
-  width: 100%;
+  width: 1280px;
   min-height: 100vh;
+  margin: 0 auto;
 }
 
 /* SIDEBAR LAYOUT */
 .sidebar {
   width: 220px;
-  background-color: #0f172a;
+  background-color: #0b132b;
   color: #fff;
   padding: 16px 12px;
   display: flex;
@@ -114,6 +99,7 @@ body {
 
 .user-name { font-size: 0.75rem; font-weight: 600; color: #fff; }
 .user-role { font-size: 0.62rem; color: #64748b; }
+.chevron { font-size: 0.55rem; color: #64748b; margin-left: auto; }
 
 .quick-title {
   font-size: 0.58rem;
@@ -204,6 +190,7 @@ body {
   border: 1px solid #cbd5e1;
   padding: 6px 12px;
   border-radius: 6px;
+  width: 240px;
 }
 
 .search-input input {
@@ -211,6 +198,7 @@ body {
   background: transparent;
   outline: none;
   font-size: 0.75rem;
+  width: 100%;
 }
 
 .notif-icon {
@@ -235,6 +223,7 @@ body {
 
 .profile-name { font-size: 0.75rem; font-weight: 600; display: block; }
 .profile-role { font-size: 0.62rem; color: #64748b; display: block; }
+.caret-down { font-size: 0.55rem; color: #64748b; }
 
 .action-bar {
   padding: 10px 24px;
@@ -283,6 +272,7 @@ body {
   margin-bottom: 12px;
 }
 
+/* TOP TRIPLE CARD */
 .card-triple {
   display: flex;
   gap: 16px;
@@ -384,9 +374,11 @@ body {
   cursor: pointer;
 }
 
+/* 3-COLUMN ROW */
 .row-three { display: flex; gap: 16px; }
 .row-three > .card { flex: 1; }
 
+/* 2-COLUMN ROW */
 .row-two { display: flex; gap: 16px; }
 .col-4 { flex: 1; }
 .col-8 { flex: 2; }
@@ -517,65 +509,4 @@ body {
 .history-table td {
   padding: 8px;
   border-bottom: 1px solid #f1f5f9;
-}
-
-/* MOBILE MEDIA QUERIES */
-@media (max-width: 768px) {
-  .mobile-header { display: flex; }
-  .desktop-only { display: none; }
-
-  .app-container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-    padding: 12px 16px;
-  }
-
-  .nav-menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  .nav-item {
-    font-size: 0.7rem;
-    padding: 6px 8px;
-  }
-
-  .sidebar-user { display: none; }
-
-  .top-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 12px 16px;
-  }
-
-  .header-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .search-input { width: 70%; }
-
-  .content-body {
-    padding: 0 16px 16px 16px;
-  }
-
-  .card-triple,
-  .row-three,
-  .row-two {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .card-col.divider {
-    border-left: none;
-    border-top: 1px solid #e2e8f0;
-    padding-left: 0;
-    padding-top: 16px;
-  }
 }
