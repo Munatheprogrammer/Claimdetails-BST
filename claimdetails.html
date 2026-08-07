@@ -1,261 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VitaTrack - Claim Details</title>
-<link rel="stylesheet" href="claimdetails.css">
-<link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap)" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitaTrack - Claim Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="claimdetails.css">
 </head>
 <body>
-<aside class="sidebar">
-<div class="sidebar-top">
-<div class="brand">
-<svg class="brand-logo" width="22" height="22" viewBox="0 0 24 24" fill="#6366f1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-<div>
-<h2 class="brand-title">VitaTrack</h2>
-<p class="brand-sub">Hospital Billings & Collections</p>
-</div>
-</div>
-<nav class="nav-menu">
-<a href="dashboard.html" class="nav-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-Dashboard
-</a>
-<a href="departments.html" class="nav-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-Departments
-</a>
-<a href="workqueue.html" class="nav-item active">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
-Work Queue
-</a>
-<a href="reports.html" class="nav-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-Reports
-</a>
-<a href="#" class="nav-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-Notifications
-</a>
-<a href="#" class="nav-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-Settings
-</a>
-</nav>
-<div class="sidebar-user">
-<div class="user-info">
-<div class="avatar-green">ST</div>
-<div>
-<p class="user-name">Sec Tessa</p>
-<p class="user-role">Billing Manager</p>
-</div>
-<span class="chevron">▼</span>
-</div>
-<p class="quick-title">Quick Actions</p>
-<div class="quick-actions">
-<button><span class="plus">+</span> Add New Claims</button>
-<button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Upload Document</button>
-<button><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Generate Report</button>
-</div>
-</div>
-</div>
-<a href="onboarding.html" class="logout-btn">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-LOGOUT
-</a>
-</aside>
-<div class="main-wrapper">
-<header class="top-header">
-<div class="header-left">
-<a href="workqueue.html" class="back-link">‹ Back to Work Queue</a>
-<div class="title-row">
-<h1>Claim Details</h1>
-<span class="badge-tag">CLM-2024/1022</span>
-</div>
-</div>
-<div class="header-right">
-<div class="search-input">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-<input type="text" placeholder="Search claims, patients and invoices...">
-</div>
-<div class="notif-icon">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-<span class="red-dot"></span>
-</div>
-<div class="profile-pill">
-<div class="avatar-green">ST</div>
-<div>
-<span class="profile-name">Sec Tessa</span>
-<span class="profile-role">Billing Manager</span>
-</div>
-<span class="caret-down">▼</span>
-</div>
-</div>
-</header>
-<div class="action-bar">
-<button class="btn-sub"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Print</button>
-<button class="btn-sub"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</button>
-<button class="btn-indigo">Take Action ▼</button>
-</div>
-<main class="content-body">
-<div class="card card-triple">
-<div class="card-col">
-<h3>Patient Information</h3>
-<div class="patient-profile">
-<div class="avatar-pink">SJ</div>
-<div>
-<p class="patient-name">Sarah Johnson</p>
-<p class="patient-sub">Patient ID: PAT-004567</p>
-</div>
-</div>
-<ul class="contact-info">
-<li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (555) 987-6543</li>
-<li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sarah.johnson@gmail.com</li>
-<li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 123 Maple Street, Austin, TX 78701</li>
-</ul>
-</div>
-<div class="card-col divider">
-<h3>Claim Overview</h3>
-<table class="grid-table">
-<tr><td>Department</td><td>Oncology</td></tr>
-<tr><td>Date of Service</td><td>Apr 12 - Apr 18, 2024</td></tr>
-<tr><td>Claim Amount</td><td>$18,450.00</td></tr>
-<tr><td>Insurance Provider</td><td>Blue Cross Blue Shield</td></tr>
-<tr><td>Policy Member ID</td><td>BCBS-87654321</td></tr>
-<tr><td>Assigned To</td><td><span class="user-inline"><span class="avatar-mini">M</span> Michelle A.</span></td></tr>
-</table>
-</div>
-<div class="card-col divider">
-<div class="status-head">
-<h3>Status</h3>
-<span class="pill-orange">Pending</span>
-</div>
-<p class="aging-label">Days Outstanding</p>
-<p class="aging-value">126 days</p>
-<table class="grid-table muted">
-<tr><td>Claim Received</td><td>Apr 20, 2024</td></tr>
-<tr><td>Last Follow Up</td><td>May 10, 2024</td></tr>
-<tr><td>Next Follow Up</td><td>May 17, 2024</td></tr>
-</table>
-<button class="btn-outline-purple">Follow Up</button>
-</div>
-</div>
-<div class="row-three">
-<div class="card">
-<h3>Billing Summary</h3>
-<div class="line-row"><span>Room Charges</span><span>$6,500.00</span></div>
-<div class="line-row"><span>Procedure Charges</span><span>$8,900.00</span></div>
-<div class="line-row"><span>Medication</span><span>$2,350.00</span></div>
-<div class="line-row"><span>Laboratory</span><span>$450.00</span></div>
-<div class="line-row"><span>Other Charges</span><span>$250.00</span></div>
-<div class="line-row total-line">
-<span>Total Billed</span>
-<strong>$18,450.00</strong>
-</div>
-<div class="line-row muted-row"><span>Insurance Adjustment</span><span>-$0.00</span></div>
-<div class="due-banner">
-<span>Amount Due</span>
-<strong>$18,450.00</strong>
-</div>
-</div>
-<div class="card">
-<h3>Notes</h3>
-<div class="note-box">
-<p>Called insurance on May 10th. They confirmed receipt of documents and are currently reviewing the claim. Turn around time is 15 business days.</p>
-<span class="note-meta">-Michelle A., May 10, 2024 10:30 AM</span>
-</div>
-<button class="btn-add-note">✏️ Add Note</button>
-<div class="doc-head">
-<h3>Documents (3)</h3>
-<a href="#" class="view-all">View All</a>
-</div>
-<div class="doc-stack">
-<div class="doc-item">
-<span>📄 Itemised Bill.pdf</span>
-<span class="doc-date">May 3, 2024 ⬇️</span>
-</div>
-<div class="doc-item">
-<span>📄 Medical Records.pdf</span>
-<span class="doc-date">May 3, 2024 ⬇️</span>
-</div>
-<div class="doc-item">
-<span>📄 Insurance Card.pdf</span>
-<span class="doc-date">May 3, 2024 ⬇️</span>
-</div>
-</div>
-</div>
-<div class="card">
-<h3>Actions</h3>
-<div class="action-stack">
-<button class="btn-tile">✏️ Add Note <span class="arrow">›</span></button>
-<button class="btn-tile">☁️ Upload Documents <span class="arrow">›</span></button>
-<button class="btn-tile">👤 Assign to User <span class="arrow">›</span></button>
-<button class="btn-tile orange">🚩 Escalate Claim <span class="arrow">›</span></button>
-<button class="btn-tile green">✔ Mark as Resolved <span class="arrow">›</span></button>
-</div>
-</div>
-</div>
-<div class="row-two">
-<div class="card col-4">
-<h3>Insurance Information</h3>
-<table class="grid-table">
-<tr><td>Provider</td><td>Blue Cross Blue Shield</td></tr>
-<tr><td>Plan Name</td><td>BCBS PRO</td></tr>
-<tr><td>Policy Holder</td><td>Sarah Johnson</td></tr>
-<tr><td>Policy/Member ID</td><td>BCBS-87654321</td></tr>
-<tr><td>Group Number</td><td>567890</td></tr>
-<tr><td>Copay</td><td>$250.00</td></tr>
-<tr><td>Deductible</td><td>$1500.00</td></tr>
-<tr><td>Coinsurance</td><td>20%</td></tr>
-</table>
-</div>
-<div class="card col-8">
-<div class="history-top">
-<h3>Follow Up History</h3>
-<button class="btn-indigo-sm">+ Add Follow Up</button>
-</div>
-<div class="table-scroll">
-<table class="history-table">
-<thead>
-<tr>
-<th>Date & Time</th>
-<th>Followed Up By</th>
-<th>Activity</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>May 10, 2024 10:30AM</td>
-<td>Michelle A.</td>
-<td>Phone Call</td>
-<td>Spoke with representative. Claim under review.</td>
-</tr>
-<tr>
-<td>May 7, 2024 14:15PM</td>
-<td>Somma B.</td>
-<td>Email</td>
-<td>Sent requested additional information.</td>
-</tr>
-<tr>
-<td>May 3, 2024 11:45AM</td>
-<td>Victor C.</td>
-<td>Document Upload</td>
-<td>Uploaded additional documents.</td>
-</tr>
-<tr>
-<td>Apr 23, 2024 09:20AM</td>
-<td>Osaka D.</td>
-<td>Status Update</td>
-<td>Insurance acknowledged receipt.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</main>
-</div>
+
+  <!-- MOBILE TOP NAV -->
+  <header class="mobile-header">
+    <div class="brand">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#6366f1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <strong>VitaTrack</strong>
+    </div>
+    <span class="mobile-badge">CLM-2024/1022</span>
+  </header>
+
+  <div class="app-container">
+
+    <!-- DESKTOP SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand desktop-only">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#6366f1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <div>
+          <h2 class="brand-title">VitaTrack</h2>
+          <p class="brand-sub">Hospital Billings & Collections</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="dashboard.html" class="nav-item">🏠 Dashboard</a>
+        <a href="departments.html" class="nav-item">🏥 Departments</a>
+        <a href="workqueue.html" class="nav-item active">📋 Work Queue</a>
+        <a href="reports.html" class="nav-item">📊 Reports</a>
+        <a href="#" class="nav-item">🔔 Notifications</a>
+        <a href="#" class="nav-item">⚙️ Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-info">
+          <div class="avatar-green">ST</div>
+          <div>
+            <p class="user-name">Sec Tessa</p>
+            <p class="user-role">Billing Manager</p>
+          </div>
+        </div>
+
+        <p class="quick-title">Quick Actions</p>
+        <div class="quick-actions">
+          <button>➕ Add New Claims</button>
+          <button>📤 Upload Document</button>
+          <button>📄 Generate Report</button>
+        </div>
+      </div>
+
+      <a href="onboarding.html" class="logout-btn">🚪 LOGOUT</a>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <main class="main-content">
+
+      <!-- TOP HEADER -->
+      <header class="top-header">
+        <div class="header-left">
+          <a href="workqueue.html" class="back-link">‹ Back to Work Queue</a>
+          <div class="title-row">
+            <h1>Claim Details</h1>
+            <span class="badge-tag">CLM-2024/1022</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="search-input">
+            🔍 <input type="text" placeholder="Search claims, patients...">
+          </div>
+          <div class="notif-icon">🔔<span class="red-dot"></span></div>
+          <div class="profile-pill">
+            <div class="avatar-green">ST</div>
+            <div class="desktop-only">
+              <span class="profile-name">Sec Tessa</span>
+              <span class="profile-role">Billing Manager</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ACTION BUTTONS -->
+      <div class="action-bar">
+        <button class="btn-sub">🖨️ Print</button>
+        <button class="btn-sub">⬇️ Download</button>
+        <button class="btn-indigo">Take Action ▼</button>
+      </div>
+
+      <!-- DASHBOARD CONTENT -->
+      <div class="content-body">
+
+        <!-- TOP COMBINED CARD -->
+        <div class="card card-triple">
+          <div class="card-col">
+            <h3>Patient Information</h3>
+            <div class="patient-profile">
+              <div class="avatar-pink">SJ</div>
+              <div>
+                <p class="patient-name">Sarah Johnson</p>
+                <p class="patient-sub">Patient ID: PAT-004567</p>
+              </div>
+            </div>
+            <ul class="contact-info">
+              <li>📞 (555) 987-6543</li>
+              <li>✉️ sarah.johnson@gmail.com</li>
+              <li>📍 123 Maple Street, Austin, TX 78701</li>
+            </ul>
+          </div>
+
+          <div class="card-col divider">
+            <h3>Claim Overview</h3>
+            <table class="grid-table">
+              <tr><td>Department</td><td>Oncology</td></tr>
+              <tr><td>Date of Service</td><td>Apr 12 - Apr 18, 2024</td></tr>
+              <tr><td>Claim Amount</td><td>$18,450.00</td></tr>
+              <tr><td>Insurance Provider</td><td>Blue Cross Blue Shield</td></tr>
+              <tr><td>Policy Member ID</td><td>BCBS-87654321</td></tr>
+              <tr><td>Assigned To</td><td><span class="user-inline"><span class="avatar-mini">M</span> Michelle A.</span></td></tr>
+            </table>
+          </div>
+
+          <div class="card-col divider">
+            <div class="status-head">
+              <h3>Status</h3>
+              <span class="pill-orange">Pending</span>
+            </div>
+            <p class="aging-label">Days Outstanding</p>
+            <p class="aging-value">126 days</p>
+            <table class="grid-table muted">
+              <tr><td>Claim Received</td><td>Apr 20, 2024</td></tr>
+              <tr><td>Last Follow Up</td><td>May 10, 2024</td></tr>
+              <tr><td>Next Follow Up</td><td>May 17, 2024</td></tr>
+            </table>
+            <button class="btn-outline-purple">Follow Up</button>
+          </div>
+        </div>
+
+        <!-- ROW TWO -->
+        <div class="row-three">
+          <div class="card">
+            <h3>Billing Summary</h3>
+            <div class="line-row"><span>Room Charges</span><span>$6,500.00</span></div>
+            <div class="line-row"><span>Procedure Charges</span><span>$8,900.00</span></div>
+            <div class="line-row"><span>Medication</span><span>$2,350.00</span></div>
+            <div class="line-row"><span>Laboratory</span><span>$450.00</span></div>
+            <div class="line-row"><span>Other Charges</span><span>$250.00</span></div>
+
+            <div class="line-row total-line">
+              <span>Total Billed</span>
+              <strong>$18,450.00</strong>
+            </div>
+            <div class="line-row muted-row"><span>Insurance Adjustment</span><span>-$0.00</span></div>
+            <div class="due-banner">
+              <span>Amount Due</span>
+              <strong>$18,450.00</strong>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Notes</h3>
+            <div class="note-box">
+              <p>Called insurance on May 10th. They confirmed receipt of documents and are currently reviewing the claim. Turn around time is 15 business days.</p>
+              <span class="note-meta">-Michelle A., May 10, 2024 10:30 AM</span>
+            </div>
+            <button class="btn-add-note">✏️ Add Note</button>
+
+            <div class="doc-head">
+              <h3>Documents (3)</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="doc-stack">
+              <div class="doc-item"><span>📄 Itemised Bill.pdf</span><span class="doc-date">May 3, 2024 ⬇️</span></div>
+              <div class="doc-item"><span>📄 Medical Records.pdf</span><span class="doc-date">May 3, 2024 ⬇️</span></div>
+              <div class="doc-item"><span>📄 Insurance Card.pdf</span><span class="doc-date">May 3, 2024 ⬇️</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Actions</h3>
+            <div class="action-stack">
+              <button class="btn-tile">✏️ Add Note <span class="arrow">›</span></button>
+              <button class="btn-tile">☁️ Upload Documents <span class="arrow">›</span></button>
+              <button class="btn-tile">👤 Assign to User <span class="arrow">›</span></button>
+              <button class="btn-tile orange">🚩 Escalate Claim <span class="arrow">›</span></button>
+              <button class="btn-tile green">✔ Mark as Resolved <span class="arrow">›</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW THREE -->
+        <div class="row-two">
+          <div class="card col-4">
+            <h3>Insurance Information</h3>
+            <table class="grid-table">
+              <tr><td>Provider</td><td>Blue Cross Blue Shield</td></tr>
+              <tr><td>Plan Name</td><td>BCBS PRO</td></tr>
+              <tr><td>Policy Holder</td><td>Sarah Johnson</td></tr>
+              <tr><td>Policy/Member ID</td><td>BCBS-87654321</td></tr>
+              <tr><td>Group Number</td><td>567890</td></tr>
+              <tr><td>Copay</td><td>$250.00</td></tr>
+              <tr><td>Deductible</td><td>$1500.00</td></tr>
+              <tr><td>Coinsurance</td><td>20%</td></tr>
+            </table>
+          </div>
+
+          <div class="card col-8">
+            <div class="history-top">
+              <h3>Follow Up History</h3>
+              <button class="btn-indigo-sm">+ Add Follow Up</button>
+            </div>
+            <div class="table-scroll">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Date & Time</th>
+                    <th>Followed Up By</th>
+                    <th>Activity</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>May 10, 2024 10:30AM</td>
+                    <td>Michelle A.</td>
+                    <td>Phone Call</td>
+                    <td>Spoke with representative. Claim under review.</td>
+                  </tr>
+                  <tr>
+                    <td>May 7, 2024 14:15PM</td>
+                    <td>Somma B.</td>
+                    <td>Email</td>
+                    <td>Sent requested additional information.</td>
+                  </tr>
+                  <tr>
+                    <td>May 3, 2024 11:45AM</td>
+                    <td>Victor C.</td>
+                    <td>Document Upload</td>
+                    <td>Uploaded additional documents.</td>
+                  </tr>
+                  <tr>
+                    <td>Apr 23, 2024 09:20AM</td>
+                    <td>Osaka D.</td>
+                    <td>Status Update</td>
+                    <td>Insurance acknowledged receipt.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
 </body>
 </html>
