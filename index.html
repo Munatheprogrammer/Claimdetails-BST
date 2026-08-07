@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Claim Details · CLM-2024/1022 · VitaTrack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <div class="scrim" id="scrim" hidden></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__scroll">
+
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 34" fill="none">
+            <path d="M6 2h11c5 0 9 4 9 9s-4 9-9 9h-3l-8 12V2Z" fill="#4B49F0"/>
+            <circle cx="26" cy="5" r="4" fill="#F2B84B"/>
+          </svg>
+        </span>
+        <div class="brand__text">
+          <h1 class="brand__name">VitaTrack</h1>
+        </div>
+      </div>
+      <p class="brand__tagline">Hospital Billings &amp; Collections</p>
+
+      <nav class="nav" aria-label="Main">
+        <a class="nav__item" href="#" data-nav>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="nav__item" href="#" data-nav>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/><path d="M10.5 21v-3h3v3"/></svg>
+          <span>Departments</span>
+        </a>
+
+        <a class="nav__item nav__item--active" href="#" data-nav aria-current="page">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v2.5H9z"/><path d="M15 5h2.5A1.5 1.5 0 0 1 19 6.5v13A1.5 1.5 0 0 1 17.5 21h-11A1.5 1.5 0 0 1 5 19.5v-13A1.5 1.5 0 0 1 6.5 5H9"/><path d="M9 11h6M9 15h4"/></svg>
+          <span>Work Queue</span>
+        </a>
+
+        <a class="nav__item" href="#" data-nav>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><rect x="5.5" y="11" width="3.2" height="6"/><rect x="10.4" y="7" width="3.2" height="10"/><rect x="15.3" y="13" width="3.2" height="4"/></svg>
+          <span>Reports</span>
+        </a>
+
+        <a class="nav__item" href="#" data-nav>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.5a6 6 0 0 0-12 0c0 5-2 6.5-2 6.5h16s-2-1.5-2-6.5Z"/><path d="M10.3 19a2 2 0 0 0 3.4 0"/></svg>
+          <span>Notifications</span>
+        </a>
+
+        <a class="nav__item" href="#" data-nav>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 14.5a1.6 1.6 0 0 0 .32 1.77l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.46V21a2 2 0 0 1-4 0v-.11a1.6 1.6 0 0 0-1.05-1.46 1.6 1.6 0 0 0-1.77.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97H3a2 2 0 0 1 0-4h.11a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.6 1.6 0 0 0 1.77.32H9a1.6 1.6 0 0 0 .97-1.46V3a2 2 0 0 1 4 0v.11a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.32 1.77V9a1.6 1.6 0 0 0 1.46.97H21a2 2 0 0 1 0 4h-.11a1.6 1.6 0 0 0-1.46.97Z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <hr class="rule" />
+
+      <button class="side-user" type="button">
+        <span class="avatar avatar--dot" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0c1a33" stroke-width="1.7"><circle cx="12" cy="9" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+        </span>
+        <span class="side-user__text">
+          <strong>Sec Tessa</strong>
+          <small>Billing Manager</small>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+
+      <hr class="rule" />
+
+      <p class="side-label">Quick Actions</p>
+
+      <div class="quick">
+        <button class="nav__item nav__item--btn" type="button" data-action="toast" data-msg="New claim form is not part of this screen">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 8.5v7M8.5 12h7"/></svg>
+          <span>Add New Claims</span>
+        </button>
+        <button class="nav__item nav__item--btn" type="button" data-action="upload">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a3.5 3.5 0 0 0 .3-6.99A5.5 5.5 0 0 0 6.6 9.6 3.7 3.7 0 0 0 7 18Z"/><path d="M12 15.5v-6M9.8 11.4 12 9.2l2.2 2.2"/></svg>
+          <span>Upload Document</span>
+        </button>
+        <button class="nav__item nav__item--btn" type="button" data-action="download-claim">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><rect x="5.5" y="11" width="3.2" height="6"/><rect x="10.4" y="7" width="3.2" height="10"/><rect x="15.3" y="13" width="3.2" height="4"/></svg>
+          <span>Generate Report</span>
+        </button>
+      </div>
+
+      <button class="logout" type="button" data-action="logout">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"/><path d="M15.5 8.5 19 12l-3.5 3.5"/><path d="M19 12h-9"/></svg>
+          <span>LOGOUT</span>
+      </button>
+
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <div class="main">
+
+    <header class="topbar">
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <div class="topbar__left">
+        <a class="back" href="#" id="backLink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6"/></svg>
+          <span>Back to Work Queue</span>
+        </a>
+        <div class="topbar__title">
+          <h2>Claim Details</h2>
+          <span class="chip">CLM-2024/1022</span>
+        </div>
+      </div>
+
+      <div class="search">
+        <svg class="search__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <input type="search" id="search" placeholder="Search claims, patients and invoices...." aria-label="Search claims, patients and invoices" />
+      </div>
+
+      <div class="topbar__right">
+        <div class="menu">
+          <button class="bell" type="button" data-menu-btn aria-label="Notifications" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.5a6 6 0 0 0-12 0c0 5-2 6.5-2 6.5h16s-2-1.5-2-6.5Z"/><path d="M10.3 19a2 2 0 0 0 3.4 0"/></svg>
+            <span class="bell__dot" id="bellDot"></span>
+          </button>
+          <div class="menu__panel menu__panel--wide" data-menu-panel hidden>
+            <p class="menu__head">Notifications</p>
+            <button class="menu__item menu__item--stack" type="button" data-action="toast" data-msg="Opened: Claim CLM-2024/1022 is 126 days outstanding">
+              <strong>Claim overdue</strong>
+              <small>CLM-2024/1022 has passed 120 days.</small>
+            </button>
+            <button class="menu__item menu__item--stack" type="button" data-action="toast" data-msg="Opened: Blue Cross Blue Shield review update">
+              <strong>Insurer update</strong>
+              <small>Blue Cross Blue Shield is reviewing the claim.</small>
+            </button>
+            <button class="menu__item menu__item--stack" type="button" data-action="toast" data-msg="Opened: Follow up due May 17, 2024">
+              <strong>Follow up due</strong>
+              <small>Next follow up scheduled for May 17, 2024.</small>
+            </button>
+            <div class="menu__sep"></div>
+            <button class="menu__item" type="button" data-action="clear-notifications">Mark all as read</button>
+          </div>
+        </div>
+
+        <div class="menu">
+          <button class="account" type="button" data-menu-btn aria-expanded="false">
+            <span class="avatar avatar--dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0c1a33" stroke-width="1.7"><circle cx="12" cy="9" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+            </span>
+            <span class="account__text">
+              <strong>Sec Tessa</strong>
+              <small>Billing Manager</small>
+            </span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="menu__panel" data-menu-panel hidden>
+            <p class="menu__head">Sec Tessa · Billing Manager</p>
+            <button class="menu__item" type="button" data-action="go" data-view="Profile">View profile</button>
+            <button class="menu__item" type="button" data-action="go" data-view="Settings">Account settings</button>
+            <button class="menu__item" type="button" data-action="go" data-view="Notifications">Notification preferences</button>
+            <div class="menu__sep"></div>
+            <button class="menu__item menu__item--danger" type="button" data-action="logout">Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- toolbar -->
+      <div class="toolbar">
+        <button class="btn btn--ghost" type="button" data-action="print">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V4h10v5"/><rect x="4" y="9" width="16" height="7" rx="1.6"/><path d="M7 14h10v6H7z"/></svg>
+          Print
+        </button>
+        <button class="btn btn--ghost" type="button" data-action="download-claim">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m8 10.5 4 4 4-4"/><path d="M5 19h14"/></svg>
+          Download
+        </button>
+        <div class="menu">
+          <button class="btn btn--primary" type="button" data-menu-btn aria-expanded="false">
+            Take Action
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="menu__panel menu__panel--right" data-menu-panel hidden>
+            <button class="menu__item" type="button" data-action="add-note">Add note</button>
+            <button class="menu__item" type="button" data-action="upload">Upload documents</button>
+            <button class="menu__item" type="button" data-action="assign">Assign to user</button>
+            <button class="menu__item" type="button" data-action="follow-up">Log follow up</button>
+            <div class="menu__sep"></div>
+            <button class="menu__item" type="button" data-action="escalate">Escalate claim</button>
+            <button class="menu__item" type="button" data-action="resolve">Mark as resolved</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- overview card -->
+      <section class="card overview">
+        <div class="overview__col">
+          <h3 class="card__title">Patient Information</h3>
+
+          <div class="patient">
+            <span class="initials">SJ</span>
+            <div>
+              <p class="patient__name">Sarah Johnson</p>
+              <p class="patient__id">Patient ID: PAT-004567</p>
+            </div>
+          </div>
+
+          <ul class="contact">
+            <li>
+              <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5L16 13l4 1.5v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z"/></svg>
+              <a class="linkish" href="tel:+15559876543">(555) 987-6543</a>
+            </li>
+            <li>
+              <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.8 7 8.2 6 8.2-6"/></svg>
+              <a class="linkish" href="mailto:sarah.johnson@gmail.com">sarah.johnson@gmail.com</a>
+            </li>
+            <li>
+              <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <button class="linkish" type="button" data-action="map" data-address="123 Maple Street, Austin, TX 78701">123 Maple Street, Austin, TX 78701</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="overview__col">
+          <h3 class="card__title">Claim Overview</h3>
+          <dl class="pairs">
+            <div class="pair"><dt>Department</dt><dd>Oncology</dd></div>
+            <div class="pair"><dt>Date of Service</dt><dd>Apr 12 – Apr 18, 2024</dd></div>
+            <div class="pair"><dt>Claim Amount</dt><dd>$18,450.00</dd></div>
+            <div class="pair"><dt>Insurance Provider</dt><dd>Blue Cross Blue Shield</dd></div>
+            <div class="pair"><dt>Policy Member ID</dt><dd>BCBS-87654321</dd></div>
+            <div class="pair">
+              <dt>Assigned To</dt>
+              <dd class="assignee">
+                <span class="avatar avatar--sm" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3a4a63" stroke-width="1.7"><circle cx="12" cy="9" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+                </span>
+                <span id="assignee">Michelle A.</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="overview__col">
+          <div class="status-head">
+            <h3 class="card__title">Status</h3>
+            <span class="badge badge--pending" id="statusBadge">Pending</span>
+          </div>
+
+          <p class="stat__label">Days Outstanding</p>
+          <p class="stat__value">126 days</p>
+
+          <dl class="pairs pairs--tight">
+            <div class="pair"><dt>Claim Received</dt><dd>Apr 20, 2024</dd></div>
+            <div class="pair"><dt>Last Follow Up</dt><dd>May 10, 2024</dd></div>
+            <div class="pair"><dt>Next Follow Up</dt><dd>May 17, 2024</dd></div>
+          </dl>
+
+          <button class="btn btn--outline-plum" type="button" data-action="follow-up">Follow Up</button>
+        </div>
+      </section>
+
+      <!-- three cards -->
+      <div class="grid-3">
+
+        <section class="card">
+          <h3 class="card__title">Billing Summary</h3>
+          <ul class="lines">
+            <li><span>Room Charges</span><span>$6,500.00</span></li>
+            <li><span>Procedure Charges</span><span>$8,900.00</span></li>
+            <li><span>Medication</span><span>$2,350.00</span></li>
+            <li><span>Laboratory</span><span>$450.00</span></li>
+            <li><span>Other Charges</span><span>$250.00</span></li>
+          </ul>
+
+          <div class="total">
+            <span>Total Billed</span><span>$18,450.00</span>
+          </div>
+
+          <div class="adjustment">
+            <span>Insurance Adjustment</span><span class="neg">-$0.00</span>
+          </div>
+
+          <div class="due">
+            <span>Amount Due</span><span>$18,450.00</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3 class="card__title">Notes</h3>
+
+          <div class="notes" id="notesList">
+          <article class="note">
+            <p>Called insurance on May 10th. They confirmed receipt of documents and are currently reviewing the claim. Turn around time is in 15 business days.</p>
+            <p class="note__meta">-Michelle A.&nbsp; May 10, 2024 10:30 AM</p>
+          </article>
+          </div>
+
+          <button class="btn btn--outline-blue btn--full" type="button" data-action="add-note">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10-10-4-4L4 16v4Z"/><path d="m14.5 5.5 4 4"/></svg>
+            Add Note
+          </button>
+
+          <div class="docs-head">
+            <h4 class="docs-head__title">Documents (<span id="docCount">3</span>)</h4>
+            <button class="link" type="button" data-action="toggle-docs" id="viewAllDocs">View All</button>
+          </div>
+
+          <ul class="docs" id="docsList">
+            <li>
+              <svg class="ico ico--lg doc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.8 1.8 0 0 0-1.8 1.8v14.4A1.8 1.8 0 0 0 7 21h10a1.8 1.8 0 0 0 1.8-1.8V8Z"/><path d="M14 3v5h4.8"/><path d="M8.5 13h7M8.5 16.5h5"/></svg>
+              <span class="docs__name">Itemised Bill.pdf</span>
+              <span class="docs__date">May 3, 2024</span>
+              <button class="icon-btn" type="button" data-action="download-doc" aria-label="Download Itemised Bill.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m8 10.5 4 4 4-4"/><path d="M5 19h14"/></svg>
+              </button>
+            </li>
+            <li>
+              <svg class="ico ico--lg doc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.8 1.8 0 0 0-1.8 1.8v14.4A1.8 1.8 0 0 0 7 21h10a1.8 1.8 0 0 0 1.8-1.8V8Z"/><path d="M14 3v5h4.8"/><path d="M8.5 13h7M8.5 16.5h5"/></svg>
+              <span class="docs__name">Medical Records.pdf</span>
+              <span class="docs__date">May 3, 2024</span>
+              <button class="icon-btn" type="button" data-action="download-doc" aria-label="Download Medical Records.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m8 10.5 4 4 4-4"/><path d="M5 19h14"/></svg>
+              </button>
+            </li>
+            <li>
+              <svg class="ico ico--lg doc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1.8 1.8 0 0 0-1.8 1.8v14.4A1.8 1.8 0 0 0 7 21h10a1.8 1.8 0 0 0 1.8-1.8V8Z"/><path d="M14 3v5h4.8"/><path d="M8.5 13h7M8.5 16.5h5"/></svg>
+              <span class="docs__name">Insurance Card.pdf</span>
+              <span class="docs__date">May 3, 2024</span>
+              <button class="icon-btn" type="button" data-action="download-doc" aria-label="Download Insurance Card.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m8 10.5 4 4 4-4"/><path d="M5 19h14"/></svg>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3 class="card__title">Actions</h3>
+
+          <div class="actions">
+            <button class="action action--outline" type="button" data-action="add-note">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10-10-4-4L4 16v4Z"/><path d="m14.5 5.5 4 4"/></svg>
+              <span>Add Note</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+
+            <button class="action action--outline" type="button" data-action="upload">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a3.5 3.5 0 0 0 .3-6.99A5.5 5.5 0 0 0 6.6 9.6 3.7 3.7 0 0 0 7 18Z"/><path d="M12 15.5v-6M9.8 11.4 12 9.2l2.2 2.2"/></svg>
+              <span>Upload Documents</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+
+            <button class="action action--outline" type="button" data-action="assign">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a3.5 3.5 0 0 0 .3-6.99A5.5 5.5 0 0 0 6.6 9.6 3.7 3.7 0 0 0 7 18Z"/><path d="M12 15.5v-6M9.8 11.4 12 9.2l2.2 2.2"/></svg>
+              <span>Assign to User</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+
+            <button class="action action--amber" type="button" data-action="escalate">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4"/><path d="M6 5h11l-2 3.5L17 12H6"/></svg>
+              <span>Escalate Claim</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+
+            <button class="action action--green" type="button" data-action="resolve">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+              <span>Mark as Resolved</span>
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <!-- bottom row -->
+      <div class="grid-bottom">
+
+        <section class="card">
+          <h3 class="card__title">Insurance Information</h3>
+          <dl class="pairs pairs--loose">
+            <div class="pair"><dt>Provider</dt><dd>Blue Cross Blue Shield</dd></div>
+            <div class="pair"><dt>Plan Name</dt><dd>BCBS PRO</dd></div>
+            <div class="pair"><dt>Policy Holder</dt><dd>Sarah Johnson</dd></div>
+            <div class="pair"><dt>Policy/ Member ID</dt><dd>BCBS- 87654321</dd></div>
+            <div class="pair"><dt>Group Number</dt><dd>567890</dd></div>
+            <div class="pair"><dt>Copay</dt><dd>$250.00</dd></div>
+            <div class="pair"><dt>Deductible</dt><dd>$1500.00</dd></div>
+            <div class="pair"><dt>Coinsurance</dt><dd>20%</dd></div>
+          </dl>
+        </section>
+
+        <section class="card">
+          <div class="history-head">
+            <h3 class="card__title card__title--flush">Follow Up History</h3>
+            <button class="btn btn--primary" type="button" data-action="follow-up">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m8 10.5 4 4 4-4"/><path d="M5 19h14"/></svg>
+              Add Follow Up
+            </button>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Date &amp; Time</th>
+                  <th scope="col">Followed Up By</th>
+                  <th scope="col">Activity</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody id="historyBody">
+                <tr>
+                  <td>May 10, 2024 10:30AM</td>
+                  <td>Michelle A.</td>
+                  <td>Phone Call</td>
+                  <td>Spoke with representative. Claim under review.</td>
+                </tr>
+                <tr>
+                  <td>May 7, 2024 14:15PM</td>
+                  <td>Somma B.</td>
+                  <td>Email</td>
+                  <td>Sent requested additional information.</td>
+                </tr>
+                <tr>
+                  <td>May 3, 2024 11:45AM</td>
+                  <td>Victor C.</td>
+                  <td>Document Upload</td>
+                  <td>Uploaded additional documents.</td>
+                </tr>
+                <tr>
+                  <td>Apr 23, 2024 09:20AM</td>
+                  <td>Osaka D.</td>
+                  <td>Status Update</td>
+                  <td>Insurance acknowledged receipt.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<input type="file" id="fileInput" multiple hidden />
+
+<div class="modal" id="modal" hidden>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h3 class="modal__title" id="modalTitle">Add note</h3>
+    <p class="modal__hint" id="modalHint">This note is saved to claim CLM-2024/1022.</p>
+    <div class="modal__field" id="modalField"></div>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" type="button" data-modal-cancel>Cancel</button>
+      <button class="btn btn--primary" type="button" id="modalConfirm">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+</body>
+</html>
