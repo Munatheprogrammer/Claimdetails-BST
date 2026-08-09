@@ -1432,15 +1432,12 @@ summary.account {
     left: auto !important;
     max-width: calc(100vw - 32px);
   }
-}
-
-  /* Force the wide notification panel to pin to the left edge safely on mobile */
-  .topbar__right .menu:first-child .menu__panel {
-    left: 0 !important;
-    right: auto !important;
-    width: calc(100vw - 32px);
-    max-width: 320px;
+    /* Force the wide notification panel to pin to the left edge safely on mobile */
+  .topbar__right .menu:first-child .menu__panel--wide {
+    width: min(300vw, calc(100vw - 32px));
+    right: -40px !important;
   }
+}
 
 
 @media print {
