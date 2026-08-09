@@ -1425,17 +1425,22 @@ summary.account {
   .card { padding: 22px 20px 24px; }
   .card .card__title { text-align: left; }
 
-  /* Keep each menu relative so the details dropdown opens properly, 
-     and shift the panels slightly left on mobile so they stay on screen */
+/* dropdown panels stay on screen */
   .topbar__right .menu { position: relative; }
-  
   .topbar__right .menu__panel {
     right: 0 !important;
     left: auto !important;
-    transform: translateX(-10px);
-    max-width: calc(100vw - 20px);
+    max-width: calc(100vw - 32px);
   }
 }
+
+  /* Force the wide notification panel to pin to the left edge safely on mobile */
+  .topbar__right .menu:first-child .menu__panel {
+    left: 0 !important;
+    right: auto !important;
+    width: calc(100vw - 32px);
+    max-width: 320px;
+  }
 
 
 @media print {
