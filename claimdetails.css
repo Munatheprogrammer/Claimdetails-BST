@@ -1056,11 +1056,18 @@ summary.account { display: flex; }
   .bell { width: 40px; height: 40px; }
   .bell__dot { top: 4px; right: 4px; width: 10px; height: 10px; }
 
-  /* dropdown panels stay on screen */
+/* dropdown panels stay on screen */
   .topbar__right .menu { position: relative; }
   .topbar__right .menu__panel {
     right: 0 !important;
     left: auto !important;
+    max-width: calc(100vw - 32px);
+  }
+
+  /* Target the notification menu specifically on mobile to prevent left-side clipping */
+  .topbar__right .menu:first-child .menu__panel {
+    left: auto !important;
+    right: -10px !important;
     max-width: calc(100vw - 32px);
   }
 
