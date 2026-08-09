@@ -791,10 +791,22 @@ table { border-collapse: collapse; width: 100%; }
   background: #fff;
   box-shadow: 0 12px 32px rgba(15, 26, 46, .16);
 }
-.topbar__right .menu__panel { left: auto; right: 0; }
-.menu__panel--right { left: auto; right: 0; }
-.menu__panel--wide { min-width: 300px; }
+.topbar__right .menu:first-child .menu__panel {
+  left: 0;
+  right: auto;
+}
 
+.topbar__right .menu:last-child .menu__panel {
+  left: auto;
+  right: 0;
+}
+
+@media (min-width: 821px) {
+  .topbar__right .menu__panel { left: auto; right: 0; }
+}
+
+.menu__panel--wide { min-width: 300px; }
+.menu__panel--right { left: auto; right: 0; }
 .menu__head {
   padding: 8px 12px 10px;
   font-size: 13px;
