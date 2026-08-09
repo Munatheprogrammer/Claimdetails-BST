@@ -1419,27 +1419,22 @@ summary.account {
   .burger { display: grid; }
   .drawer-close { display: grid; }
 
-  .topbar { flex-wrap: wrap; gap: 18px; padding-inline: 20px; }
+  .topbar { flex-wrap: wrap; gap: 18px; padding-inline: 20px; position: relative; }
   .search { order: 3; flex-basis: 100%; max-width: none; margin: 0; }
-  .topbar__right { margin-left: auto; }
+  .topbar__right { margin-left: auto; position: relative; }
   .card { padding: 22px 20px 24px; }
   .card .card__title { text-align: left; }
 
-  /* Notification menu (first menu) centered on mobile */
-  .topbar__right .menu:first-child .menu__panel {
-    position: fixed;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%);
-    width: calc(100vw - 32px);
-    max-width: 340px;
-  }
-
-  /* Profile menu (last menu) aligned towards the left side on mobile */
-  .topbar__right .menu:last-child .menu__panel {
-    left: 0 !important;
-    right: auto !important;
-    min-width: 232px;
+  /* Keep menus safely inside the mobile screen boundaries */
+  .topbar__right .menu { position: static; }
+  
+  .topbar__right .menu__panel {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 10px !important;
+    left: auto !important;
+    width: auto;
+    max-width: calc(100vw - 20px);
   }
 }
 
