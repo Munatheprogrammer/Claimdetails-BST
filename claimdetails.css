@@ -1394,6 +1394,7 @@ summary.account {
     gap: 12px;
     padding: 16px;
     position: relative;
+    overflow: visible !important;
   }
 
   /* Show mobile brand row centered at the top */
@@ -1484,17 +1485,18 @@ summary.account {
   .bell { width: 36px; height: 36px; }
   .bell__dot { top: 4px; right: 4px; width: 8px; height: 8px; }
 
-  /* Center notification dropdown panel on mobile and constrain to screen width/height */
+  /* Fully constrained mobile viewport centering fix for notification contents */
   .mobile-bell-menu .menu__panel--wide {
     position: fixed !important;
-    top: 70px !important;
+    top: 65px !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
     width: calc(100vw - 32px) !important;
     max-width: 340px !important;
-    max-height: calc(100vh - 90px);
-    overflow-y: auto;
+    max-height: calc(100vh - 90px) !important;
+    overflow-y: auto !important;
+    z-index: 9999 !important;
   }
 
   .content { padding: 16px 16px 32px; }
