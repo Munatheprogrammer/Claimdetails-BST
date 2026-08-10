@@ -1421,7 +1421,6 @@ summary.account {
 
   /* Position notification bell on the right of the mobile brand row */
   .mobile-bell-menu {
-    position: static;
     position: absolute;
     right: 0;
     top: 50%;
@@ -1485,18 +1484,17 @@ summary.account {
   .bell { width: 36px; height: 36px; }
   .bell__dot { top: 4px; right: 4px; width: 8px; height: 8px; }
 
-  /* Center notification dropdown panel on mobile */
+  /* Center notification dropdown panel on mobile and constrain to screen width/height */
   .mobile-bell-menu .menu__panel--wide {
     position: fixed !important;
-    top: 65px !important;
+    top: 70px !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
     width: calc(100vw - 32px) !important;
     max-width: 340px !important;
-    max-height: calc(100vh - 90px) !important;
-    overflow-y: auto !important;
-    z-index: 9999 !important;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
   }
 
   .content { padding: 16px 16px 32px; }
