@@ -1493,6 +1493,8 @@ summary.account {
     transform: translateX(-50%) !important;
     width: calc(100vw - 32px) !important;
     max-width: 340px !important;
+    max-height: calc(100vh - 90px) !important;
+    overflow-y: auto !important;
   }
 
   .content { padding: 16px 16px 32px; }
