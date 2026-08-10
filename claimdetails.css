@@ -1327,7 +1327,6 @@ summary.account {
 }
 
 @media (min-width: 821px) {
-
   .burger,
   .scrim,
   .drawer-close {
@@ -1425,15 +1424,48 @@ summary.account {
   .drawer-close { display: grid; }
 
   .topbar {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
     position: relative;
+  }
+
+  /* Top branding row with Logo + VitaTrack Name + Notification Bell */
+  .topbar-mobile-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .topbar-mobile-brand .brand__mark {
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar-mobile-brand .brand__name {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin-left: 8px;
+  }
+
+  /* Move the notification bell to the right side of the branding row */
+  .topbar-mobile-brand .topbar__right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
   }
 
   .topbar__left {
     min-width: 0;
-    flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1441,36 +1473,16 @@ summary.account {
 
   .back {
     margin-left: -2px;
+    font-size: 14px;
   }
 
-  /* Completely remove account profile info/dropdown from mobile header */
-  .topbar__right .account {
+  /* Completely hide standard profile dropdown and duplicate topbar__right sections on mobile */
+  .topbar > .topbar__right {
     display: none !important;
   }
 
-  /* Insert VitaTrack SVG logo and name header block for mobile */
-  .topbar-mobile-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    margin: 4px 0 10px 0;
-  }
-
-  .topbar-mobile-brand .brand__mark {
-    width: 24px;
-    height: 26px;
-  }
-
-  .topbar-mobile-brand .brand__name {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -.01em;
-  }
-
   .topbar__title {
-    margin-top: 2px;
+    margin-top: 4px;
     width: 100%;
     justify-content: flex-start;
   }
@@ -1479,14 +1491,17 @@ summary.account {
     font-size: 19px; 
   }
 
-  .search { order: 3; flex-basis: 100%; max-width: none; margin: 0; }
-  .topbar__right { margin-left: auto; gap: 8px; position: relative; }
+  .search { 
+    order: 4; 
+    width: 100%; 
+    margin: 0; 
+  }
 
-  .bell { width: 38px; height: 38px; }
-  .bell__dot { top: 4px; right: 4px; width: 9px; height: 9px; }
+  .bell { width: 36px; height: 36px; }
+  .bell__dot { top: 4px; right: 4px; width: 8px; height: 8px; }
 
   /* Center notification panel on mobile screens */
-  .topbar__right .menu:first-child .menu__panel--wide {
+  .topbar-mobile-brand .menu__panel--wide {
     position: fixed !important;
     top: 70px !important;
     left: 50% !important;
