@@ -1384,7 +1384,6 @@ summary.account {
   .drawer-toggle:checked ~ .sidebar { transform: none; }
   .drawer-toggle:checked ~ .scrim { display: block; }
 
-  .burger { display: grid; }
   .drawer-close { display: grid; }
 
   /* Topbar layout adjustment for mobile */
@@ -1397,7 +1396,7 @@ summary.account {
     position: relative;
   }
 
-  /* Show mobile brand row at the top */
+  /* Show mobile brand row centered at the top */
   .topbar-mobile-brand {
     display: flex;
     align-items: center;
@@ -1405,6 +1404,7 @@ summary.account {
     position: relative;
     width: 100%;
     margin-bottom: 2px;
+    order: 1;
   }
 
   .topbar-mobile-brand .brand__mark {
@@ -1439,21 +1439,40 @@ summary.account {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    order: 2;
   }
 
   .back {
     margin-left: -2px;
     font-size: 14px;
+    display: inline-flex;
+    align-items: center;
   }
 
+  /* Burger icon just below back arrow, claim details beside it, and chip text next */
   .topbar__title {
-    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
     width: 100%;
     justify-content: flex-start;
   }
 
+  .burger { 
+    display: grid; 
+    width: 36px;
+    height: 36px;
+  }
+
   .topbar__title h2 { 
-    font-size: 19px; 
+    font-size: 18px; 
+    font-weight: 600;
+  }
+
+  .topbar__title .chip {
+    font-size: 12.5px;
+    padding: 4px 8px;
   }
 
   .search { 
