@@ -1333,6 +1333,10 @@ summary.account {
   .drawer-close {
     display: none !important;
   }
+
+  .topbar-mobile-brand {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -1420,10 +1424,9 @@ summary.account {
   .burger { display: grid; }
   .drawer-close { display: grid; }
 
-  /* Header Top Row: Logo, VitaTrack Name, and shifted Back Link alignment */
   .topbar {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     padding: 12px 14px;
     position: relative;
   }
@@ -1440,24 +1443,30 @@ summary.account {
     margin-left: -2px;
   }
 
-  /* Brand logo and name layout inside mobile header area */
-  .topbar-header-brand {
+  /* Completely remove account profile info/dropdown from mobile header */
+  .topbar__right .account {
+    display: none !important;
+  }
+
+  /* Insert VitaTrack SVG logo and name header block for mobile */
+  .topbar-mobile-brand {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     width: 100%;
-    margin-bottom: 8px;
+    margin: 4px 0 10px 0;
   }
-  
-  .topbar-header-brand .brand__mark {
+
+  .topbar-mobile-brand .brand__mark {
     width: 24px;
     height: 26px;
   }
-  
-  .topbar-header-brand .brand__name {
-    font-size: 19px;
+
+  .topbar-mobile-brand .brand__name {
+    font-size: 20px;
     font-weight: 600;
+    letter-spacing: -.01em;
   }
 
   .topbar__title {
@@ -1473,11 +1482,10 @@ summary.account {
   .search { order: 3; flex-basis: 100%; max-width: none; margin: 0; }
   .topbar__right { margin-left: auto; gap: 8px; position: relative; }
 
-  .account__text { display: none; }
   .bell { width: 38px; height: 38px; }
   .bell__dot { top: 4px; right: 4px; width: 9px; height: 9px; }
 
-  /* Center the notification block on mobile */
+  /* Center notification panel on mobile screens */
   .topbar__right .menu:first-child .menu__panel--wide {
     position: fixed !important;
     top: 70px !important;
@@ -1488,17 +1496,9 @@ summary.account {
     max-width: 340px !important;
   }
 
-  /* Keep profile dropdown on the right */
-  .topbar__right .menu:last-child .menu__panel {
-    right: 0 !important;
-    left: auto !important;
-    max-width: calc(100vw - 32px);
-  }
-
   .content { padding: 16px 16px 32px; }
   .card { padding: 20px 18px 22px; }
   
-  /* Buttons compact and right-aligned */
   .toolbar {
     flex-direction: column;
     align-items: flex-end;
@@ -1514,7 +1514,6 @@ summary.account {
     justify-content: center;
   }
 
-  /* Left-align text contents in cards */
   .overview,
   .overview__col,
   .pair,
